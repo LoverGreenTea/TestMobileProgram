@@ -21,7 +21,6 @@ class SecondScreen():
     def __init__(self, **kw):
         super().__init__(**kw)
         btn = Button(text="screen2")
-        btn.on_press = self.go_to_first
         self.add_widget(btn)
 
 
