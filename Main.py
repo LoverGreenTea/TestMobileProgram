@@ -9,7 +9,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen, ScreenManager
 
 
-class FirstScreen():
+class FirstScreen(Screen):
     def __init__(self, **kw):
         super().__init__(self, **kw)
         btn = Button(text="цей текст в перщому вікни")
@@ -17,7 +17,7 @@ class FirstScreen():
         self.add_widget(btn)
     def go_to_second(self):
         self.manager.current = "second"
-class SecondScreen():
+class SecondScreen(Screen):
     def __init__(self, **kw):
         super().__init__(**kw)
         btn = Button(text="screen2")
