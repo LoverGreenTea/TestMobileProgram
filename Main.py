@@ -12,19 +12,18 @@ from kivy.uix.screenmanager import Screen, ScreenManager
 class FirstScreen():
     def __init__(self, **kw):
         super().__init__(self, **kw)
-        btn1 = Button(text="цей текст в перщому вікни")
-        btn1.on_press = self.go_to_second
-
+        btn = Button(text="цей текст в перщому вікни")
+        btn.on_press = self.go_to_second
+        self.add_widget(btn)
     def go_to_second(self):
         self.manager.current = "second"
 class SecondScreen():
     def __init__(self, **kw):
         super().__init__(**kw)
-        btn1 = Button(text="screen2")
-        btn1.on_press = self.go_to_first
+        btn = Button(text="screen2")
+        btn.on_press = self.go_to_first
+        self.add_widget(btn)
 
-    def go_to_first(self):
-        self.manager.current = "first"
 
 class MyApp(App):
     def build(self):
