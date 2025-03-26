@@ -6,7 +6,7 @@ from kivy.app import *
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.screenmanager import ScreenManager
+from kivy.uix.screenmanager import Screen, ScreenManager
 
 
 class FirstScreen():
